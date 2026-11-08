@@ -21,6 +21,8 @@ def init_db():
     conn.commit()
     conn.close()
 
+    init_db()
+
 @app.route("/")
 def home():
     conn = sqlite3.connect(DATABASE)
@@ -36,13 +38,37 @@ def home():
 
     return f"""
     <h1>Viikko 2 - Python-verkkosovellus</h1>
-    <p>Tervetuloa palvelimelleni!</p>
+
+    <p>Tervetuloa palvelimelle!</p>
+
     <h2>Kävijälaskuri</h2>
-    <p>Sivulla on vierailtu {count} kertaa.</p>
+
+    <p>Täällä on käyty {count} kertaa.</p>
+
+    <h2>Toteutus: </h2>
+
+    <p>Sivu on toteutettu Pythonilla ja siinä on käytetty Flask-
+     verkkosovelluskehystä.</p>
+
+    <p>Jokainen sivuilla käynti tallennetaan tietokantaan omana rivinään. Tietokantana on SQLite.</p>
+
+    <p>Käyntimäärä säilyy palvelimen uudelleenkäynnistyksen
+    jälkeen ja tiedot tallennetaan pysyvästi tietokantatiedostoon.</p>
+
+    <p>Uudelleenkäynnistys onnistui:
+    tämä käynnistyi automaattisesti ja kävijälaskuri
+    jatkoi laskemista edellisestä luvusta.</p>
+    <h2>Lähdekoodi</h2>
+    <p>
+
+    <a href="https://github.com/neamariah/Linux">
+    Katso projektin GitHub-repositorio
+        </a>
+        </p>
+    </body>
+    </html>
     """
 
-
 if __name__ == "__main__":
-    init_db()
     app.run()
 
