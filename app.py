@@ -62,7 +62,7 @@ def home():
     <p>
 
     <a href="https://github.com/neamariah/Linux">
-    Katso projektin GitHub-repositorio
+    Repo täällä!
         </a>
         </p>
     </body>
