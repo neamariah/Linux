@@ -37,6 +37,18 @@ def home():
     conn.close()
 
     return f"""
+
+ <html>
+    <head>
+        <style>
+            body {{
+                background-color: #F2EBED;
+                font-family: Verdana, sans-serif;
+                color: #E6A1B4;
+        </style>
+    </head>
+    <body>
+
     <h1>Viikko 2 - Python-verkkosovellus</h1>
 
     <p>Tervetuloa palvelimelle!</p>
