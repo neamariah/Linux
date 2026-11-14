@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 OUTPUT_DIR="/var/www/html/week3"
+GITHUB_URL="https://github.com/neamariah/Linux"
 TEMP_FILE=$(mktemp)
 
 GENERATED_AT=$(date '+%Y-%m-%d %H:%M:%S %Z')
